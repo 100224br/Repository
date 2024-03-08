@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic site</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   
+    <H1>Praise The Lord!</H1>
+    <br>
+    <br>
+   <p>The lord has saved me from joe biden. praise all that is holy!</p> 
+   <br><br><button type="button" onclick="sound()" id="button">Click Me</button><br>
+   
+   <div class="slideshow-container">
+    <img class="mySlides" src="img/ascension-day-of-jesus-christ-or-resurrection-day-of-son-of-god-good-friday-ascension-day-concept-by-ai-generated-free-photo-removebg-preview.png">
+    <img class="mySlides" src="img/sponge.webp">
+    <img class="mySlides" style="width: 30%;" src="img/garfield.jpg">
+    <img class="mySlides" src="img/study.jpg">
+    <img class="mySlides" src="img/ckmn14ua96231.jpg">
+    <img class="mySlides" style="width: 50%;" src="img/MicrosoftTeams-image (3).png">
+   </div>
+
+   <script>
+    function sound(){
+     var snd = new Audio('Every Hour.mp3')
+     snd.play();
+     
+      // Add an event listener for the 'ended' event of the audio element
+    snd.addEventListener('ended', function() {
+        // Restart the audio when it ends
+        snd.currentTime = 0;
+        snd.play();
+    });
+
+     
+     showSlides();
+       }
+
+       let slideIndex = 0;
+const slides = document.getElementsByClassName("mySlides");
+
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    slides[slideIndex].style.display = "block";
+    slideIndex++;
+    setTimeout(showSlides, 2500); // Change slide every 2.5 seconds (2500 milliseconds)
+}
+
+
+
+   </script>
+</body>
+</html>
